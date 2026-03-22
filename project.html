@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Poppins;
+    }
+
+    body{
+      background-image:url("image2.jpg"); ;
+      color:white;
+        background-size:cover;
+    }
+  .logo {
+    font-size: 24px;
+    font-weight:bold;
+    color: #00ffff;
+    letter-spacing: 2px;
+    font-family:poppins, sans-serif;
+    }
+    /* Navbar */
+    nav{
+      display:flex;
+      justify-content:space-between;
+      padding:15px 40px;
+      background:rgba(0,0,0,0.4);
+    }
+
+    nav a{
+      color:white;
+      margin:0 10px;
+      text-decoration:none;
+    }
+
+    nav a:hover{
+      color:#00bcd4;
+    }
+
+    /* Section */
+    .projects{
+      max-width:1100px;
+      margin:auto;
+      padding:40px 20px;
+    }
+
+    .projects h1{
+      text-align:center;
+      margin-bottom:20px;
+    }
+
+    /* Filter Buttons */
+    .filters{
+      text-align:center;
+      margin-bottom:30px;
+    }
+
+    .filters button{
+      margin:5px;
+      padding:8px 15px;
+      border:none;
+      background:#00bcd4;
+      color:black;
+      border-radius:20px;
+      cursor:pointer;
+    }
+
+    .filters button:hover{
+      background:#0097a7;
+    }
+
+    /* Grid */
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap:20px;
+    }
+
+    /* Card */
+    .card{
+      background:rgba(255,255,255,0.08);
+      border-radius:15px;
+      backdrop-filter:blur(10px);
+      overflow:hidden;
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-10px) scale(1.02);
+      box-shadow:0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    .card img{
+      width:100%;
+      height:180px;
+      object-fit:cover;
+    }
+
+    .content{
+      padding:15px;
+    }
+
+    .content h2{
+      color:#00bcd4;
+      margin-bottom:8px;
+    }
+
+    .content p{
+      font-size:14px;
+      color:#ccc;
+      margin-bottom:10px;
+    }
+
+    .tag{
+      display:inline-block;
+      background:#00bcd4;
+      color:black;
+      padding:3px 8px;
+      border-radius:5px;
+      font-size:12px;
+      margin-bottom:10px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:7px 12px;
+      background:#00bcd4;
+      color:black;
+      border-radius:5px;
+      text-decoration:none;
+      margin-right:5px;
+    }
+
+    .btn:hover{
+      background:#0097a7;
+    }
+
+    /* Animation */
+    .card{
+      animation:fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn{
+      from{opacity:0;transform:translateY(30px);}
+      to{opacity:1;transform:translateY(0);}
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Portfolio.</div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="education.html">Education</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Projects -->
+  <section class="projects">
+    <h1>My Projects</h1>
+
+    <!-- Filters -->
+    <div class="filters">
+      <button onclick="filterProjects('all')">All</button>
+      <button onclick="filterProjects('web')">Web</button>
+      <button onclick="filterProjects('data')">Data Science</button>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid">
+
+      <div class="card" data-category="web">
+        <img src="project.png" alt="Project 1">
+        <div class="content">
+          <span class="tag">Web</span>
+          <h2>Idea Management System</h2>
+          <p>Students can submit and manage innovative ideas.</p>
+          <a href="https://akash020304.github.io/idea-managemt-system/" class="btn">Live</a>
+          <a href="https://github.com/Akash020304/idea-managemt-system" class="btn">Code</a>
+        </div>
+      </div>
+
+     
+  </section>
+
+  <!-- JavaScript -->
+  <script>
+    function filterProjects(category){
+      let cards = document.querySelectorAll(".card");
+
+      cards.forEach(card => {
+        if(category === "all" || card.dataset.category === category){
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>

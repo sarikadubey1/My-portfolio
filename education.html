@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Poppins;
+    }
+
+    body{
+      background-image:url("image2.jpg");
+      color:white;
+      background-size:cover;
+    }
+  .logo {
+    font-size: 24px;
+    font-weight:bold;
+    color: #00ffff;
+    letter-spacing: 2px;
+    font-family:poppins, sans-serif;
+  }
+    /* Navbar */
+    nav{
+      display:flex;
+      justify-content:space-between;
+      padding:15px 40px;
+      background:rgba(0,0,0,0.5);
+    }
+
+    nav a{
+      color:white;
+      margin:0 10px;
+      text-decoration:none;
+    }
+
+    nav a:hover{
+      color:#00bcd4;
+    }
+
+    /* Education Section */
+    .education{
+      max-width:900px;
+      margin:auto;
+      padding:40px 20px;
+    }
+
+    .education h1{
+      text-align:center;
+      margin-bottom:30px;
+      font-size:36px;
+    }
+
+    /* Cards */
+    .edu-card{
+      background:rgba(255,255,255,0.05);
+      padding:20px;
+      border-radius:10px;
+      margin-bottom:20px;
+      border-left:5px solid #00bcd4;
+      transition:0.3s;
+    }
+
+    .edu-card:hover{
+      transform:translateY(-5px);
+      box-shadow:0 10px 20px rgba(0,0,0,0.4);
+    }
+
+    .edu-card h2{
+      color:#00bcd4;
+      margin-bottom:5px;
+    }
+
+    .edu-card h3{
+      font-size:16px;
+      margin-bottom:5px;
+      color:#ccc;
+    }
+
+    .edu-card p{
+      font-size:14px;
+      color:#aaa;
+    }
+
+    /* Animation */
+    .education{
+      animation:fadeIn 1.2s ease;
+    }
+
+    @keyframes fadeIn{
+      from{opacity:0;transform:translateY(30px);}
+      to{opacity:1;transform:translateY(0);}
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Portfolio.</div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="education.html">Education</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Education Section -->
+  <section class="education">
+    <h1>My Education</h1>
+
+    <div class="edu-card">
+      <h2>Class 10th</h2>
+      <h3>Government excellence higher secondary school waidhan , Singrauli , Madhya Pradesh</h3>
+      <p>Year: 2020 | </p>
+    </div>
+
+    <div class="edu-card">
+      <h2>Class 12th</h2>
+      <h3>Government excellence higher secondary school waidhan , Singrauli , Madhya Pradesh</h3>
+      <p>Year: 2022 | </p>
+    </div>
+
+    <div class="edu-card">
+      <h2>Diploma - Computer Science Engineering</h2>
+      <h3>Government Polytechnic Wiadhan , Singrauli , Madhya Pradesh</h3>
+      <p>Year: 2022-2025 | </p>
+    </div>
+
+    <div class="edu-card">
+      <h2>Bachelor's Degree (B.Tech)</h2>
+      <h3>jabalpur Engineering College,Jabalpur, Madhya Pradesh</h3>
+      <p>Year: 2025-2027 - Present</p>
+    </div>
+
+  </section>
+
+</body>
+</html>
